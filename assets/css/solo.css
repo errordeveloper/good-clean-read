@@ -156,7 +156,7 @@ word-wrap: break-word;
   max-width: 75%;
 }
 
-@media (max-width: 635px) {
+@media (max-width: 80%) {
 .container img {
  max-width: 100%
  }
@@ -192,7 +192,7 @@ pre > code {
 }
 
 .container {
-  max-width: 625px;
+  max-width: 70%;
   margin: 0 auto;
   padding: 0 0.75rem;
 }
@@ -207,7 +207,7 @@ pre > code {
   font-style: italic;
 }
 
-@media (max-width: 635px) {
+@media (max-width: 80%) {
 .sharing {
  font-size: 85%;
  }
