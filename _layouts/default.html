@@ -18,10 +18,16 @@
 <body>
   <article>
    <div class="container">
-    <h1><a href="./">{{ site.tag_text }}</a></h1>
+    <!-- TODO: link to repo <h1><a href="./">{{ site.tag_text }}</a></h1> -->
+    <!-- TODO: use liquid vars -->
+    <a class="github-button" href="https://github.com/weaveworks/eksctl" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star eksctl on GitHub">Star</a>
+    <a class="github-button" href="https://github.com/weaveworks/eksctl/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch eksctl on GitHub">Watch</a>
+    <a class="github-button" href="https://github.com/weaveworks/eksctl/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork eksctl on GitHub">Fork</a>
+    <a class="github-button" href="https://github.com/weaveworks/eksctl/issues" data-icon="octicon-issue-opened" data-size="large" data-show-count="true" aria-label="Issue eksctl on GitHub">Issue</a>
     {{ content }}
     </div>
   </article>
-<script src="{{ site.baseurl }}/scripts/rrssb.min.js"></script>
+<script src="{{ site.baseurl }}/assets/scripts/rrssb.min.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>
