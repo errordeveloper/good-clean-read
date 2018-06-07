@@ -1,6 +1,6 @@
 title: Simple Project Homepage
 description: A very simple Jekyll layout for Github project
-baseurl: ""
+baseurl: "https://errordeveloper.github.io/simple-project-homepage"
 
 font-awesome-include: true # make this false if you don't need font-awesome
 
