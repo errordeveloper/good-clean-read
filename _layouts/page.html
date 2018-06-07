@@ -11,19 +11,21 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css">
   {% if site.font-awesome-include %}<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/assets/css/font-awesome.min.css">{% endif %}
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/rrssb.css">
-
   <script src="{{ site.baseurl }}/assets/scripts/jquery.js"></script>
   <link rel="canonical" href="{{ site.url }}" />
 </head>
 <body>
   <article>
    <div class="container">
-    <!-- TODO: link to repo <h1><a href="./">{{ site.tag_text }}</a></h1> -->
-    <!-- TODO: use liquid vars -->
-    <a class="github-button" href="https://github.com/weaveworks/eksctl" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star eksctl on GitHub">Star</a>
-    <a class="github-button" href="https://github.com/weaveworks/eksctl/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch eksctl on GitHub">Watch</a>
-    <a class="github-button" href="https://github.com/weaveworks/eksctl/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork eksctl on GitHub">Fork</a>
-    <a class="github-button" href="https://github.com/weaveworks/eksctl/issues" data-icon="octicon-issue-opened" data-size="large" data-show-count="true" aria-label="Issue eksctl on GitHub">Issue</a>
+    {% if site.repository %}
+    <div id="github-buttons">
+      <a class="github-link" href="https://github.com/{{ site.repository }}">{% octicon mark-github %} {{ site.repository }}</a>
+      <a class="github-button" href="https://github.com/{{ site.repository }}/eksctl" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star {{ site.repository }} on GitHub">Star</a>
+      <a class="github-button" href="https://github.com/{{ site.repository }}/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch {{ site.repository }} on GitHub">Watch</a>
+      <a class="github-button" href="https://github.com/{{ site.repository }}/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork {{ site.repository }} on GitHub">Fork</a>
+      <a class="github-button" href="https://github.com/{{ site.repository }}/issues" data-icon="octicon-issue-opened" data-size="large" data-show-count="true" aria-label="Issue {{ site.repository }} on GitHub">Issue</a>
+    </div>
+    {% endif %}
     {{ content }}
     </div>
   </article>
