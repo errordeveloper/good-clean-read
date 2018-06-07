@@ -18,22 +18,26 @@
   <article>
    <div class="container">
     {% if site.repository %}
-    <div id="github-buttons">
-      <a class="github-link" href="https://github.com/{{ site.repository }}">
-        <img srg="{{ site.baseurl }}/assets/images/octocat.svg"></img>
-        {{ site.repository }}
-      </a>
+    <div class="sponsor-badge">
+        <span class="sponsor-badge-text" style="margin-right: 0.2rem;">Supported by</span>
+        <a href="https://weave.works"><img src="{{ site.baseurl }}/assets/images/weaveworks.svg" style="height: 1rem;margin-bottom: -0.1rem;"></a>
+        <span class="sponsor-badge-text" style="margin-right: 0.2rem; margin-left: 0.2rem;">and built by</span>
+        <a href="https://github.com/{{ site.repository }}/graphs/contributors"><img src="{{ site.baseurl }}/assets/images/gophers.png" style="height: 1.5rem;margin-bottom: -0.3rem;"></a>
+        <span class="sponsor-badge-text" style="margin-right: 0.2rem; margin-left: 0.2rem;">on</span>
+        <a href="https://github.com/{{ site.repository }}"><img src="{{ site.baseurl }}/assets/images/octocat.svg" style="height: 1rem;margin-bottom: -0.1rem;"></a>
+    </div>
+    <div id="github-buttons" style="text-align: right;">
       <a class="github-button" href="https://github.com/{{ site.repository }}/eksctl" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star {{ site.repository }} on GitHub">Star</a>
       <a class="github-button" href="https://github.com/{{ site.repository }}/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch {{ site.repository }} on GitHub">Watch</a>
       <a class="github-button" href="https://github.com/{{ site.repository }}/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork {{ site.repository }} on GitHub">Fork</a>
       <a class="github-button" href="https://github.com/{{ site.repository }}/issues" data-icon="octicon-issue-opened" data-size="large" data-show-count="true" aria-label="Issue {{ site.repository }} on GitHub">Issue</a>
     </div>
-    <img srg="{{ site.baseurl }}/assets/images/weaveworks.svg"></img>
+    <img src="{{ site.baseurl }}/assets/images/weaveworks.svg"></img>
     {% endif %}
     {{ content }}
     </div>
   </article>
 <script src="{{ site.baseurl }}/assets/scripts/rrssb.min.js"></script>
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>
