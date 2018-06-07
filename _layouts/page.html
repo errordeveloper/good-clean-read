@@ -17,6 +17,7 @@
 <body>
   <article>
    <div class="container">
+    {% if site.repository %}
     <div id="github-buttons">
       <a class="github-link" href="https://github.com/{{ site.repository }}">{% octicon mark-github %} {{ site.repository }}</a>
       <a class="github-button" href="https://github.com/{{ site.repository }}/eksctl" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star {{ site.repository }} on GitHub">Star</a>
@@ -24,10 +25,11 @@
       <a class="github-button" href="https://github.com/{{ site.repository }}/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork {{ site.repository }} on GitHub">Fork</a>
       <a class="github-button" href="https://github.com/{{ site.repository }}/issues" data-icon="octicon-issue-opened" data-size="large" data-show-count="true" aria-label="Issue {{ site.repository }} on GitHub">Issue</a>
     </div>
+    {% endif %}
     {{ content }}
     </div>
   </article>
 <script src="{{ site.baseurl }}/assets/scripts/rrssb.min.js"></script>
-<script src="https://buttons.github.io/buttons.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>
